@@ -1,0 +1,21 @@
+package hello;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.IOException;
+
+public class Variable1{
+	public static void main(String[] args) throws IOException{
+		BufferedReader a = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter b = new BufferedWriter(new OutputStreamWriter(System.out));
+		int n = Integer.parseInt(a.readLine());
+		for(int i=1;i<=n;i++) {
+			String c = a.readLine();
+			int x = Integer.parseInt(c.split(" ")[0]);
+			int y = Integer.parseInt(c.split(" ")[1]);
+			b.write("Case #"+i+": "+(x)+" + "+(y)+" = "+(x+y)+"\n");
+		}
+		b.flush();
+	}
+}
