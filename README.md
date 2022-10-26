@@ -2,6 +2,7 @@
 
 string - int 변환
 https://codechacha.com/ko/java-convert-string-to-int/
+https://hianna.tistory.com/524
 
 BufferedReader 사용
 import java.io.BufferedReader;
