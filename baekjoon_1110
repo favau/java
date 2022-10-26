@@ -1,0 +1,24 @@
+package hello;
+import java.io.*;
+
+public class Variable1{
+	public static void main(String[] args) throws IOException{
+        BufferedReader a = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter b = new BufferedWriter(new OutputStreamWriter(System.out));
+		int x = Integer.parseInt(a.readLine());
+		int x2=x;
+		int count=0;
+		while(true) {
+			int y = x/10; 
+			int z = x%10;
+			x=y+z;
+			x=z*10+x%10;
+			count++;
+			if(x==x2) {
+				break;
+			}
+		}
+		b.write(count+"\n"); 
+		b.flush();
+	}
+}
