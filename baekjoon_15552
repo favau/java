@@ -1,0 +1,24 @@
+package hello;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.IOException;
+
+public class Variable1{
+	public static void main(String[] args) throws IOException{
+		BufferedReader a = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter b = new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		int n = Integer.parseInt(a.readLine()); //테스트 케이스의 개수 n 입력
+		for(int i=0;i<n;i++) { //테스트 케이스의 수 n만큼 반복
+			String c = a.readLine(); //문자열 입력(1 1, 12 34 ...)
+			int x = Integer.parseInt(c.split(" ")[0]); //문자열 형식이라 split으로 " " 기준 좌우로 나누어 x,y에 integer 형식으로 입력
+			int y = Integer.parseInt(c.split(" ")[1]);
+			
+			b.write(x+y+"\n");
+		
+	}
+		b.flush(); //한번에 출력
+		}
+}
