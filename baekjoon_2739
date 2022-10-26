@@ -1,0 +1,13 @@
+package hello;
+import java.util.Scanner;
+public class Variable1{
+	public static void main(String[] args) {
+		Scanner x = new Scanner(System.in);
+		int a = x.nextInt();
+		int b;
+		for(int i=1;i<=9;i++) {
+			b = a*i;
+			System.out.println(a+" * "+i+" = "+b);	
+		}
+	}
+}
