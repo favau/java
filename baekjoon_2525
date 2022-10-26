@@ -1,0 +1,26 @@
+package hello;
+import java.util.Scanner;
+public class Variable1{
+	public static void main(String[] args) {
+		Scanner x = new Scanner(System.in);
+		int d;
+		int a = x.nextInt();
+		int b = x.nextInt();
+		int c = x.nextInt();
+    //입력받은 분의 합이 60이 넘으면 시에 추가
+		if(b+c>=60) {
+			d = (b+c)%60;
+			a += (b+c)/60;
+		}
+    //입력받은 분의 합이 60보다 작으면 분만 합침
+		else {
+			d = b + c ;
+		}
+    //입력받은 시의 합이 24보다 크거나 같으면 0시부터 시작
+		if(a>=24) {
+			a -= 24;
+		}
+    //"시 분" 형식으로 출력
+		System.out.println(a+" "+d);
+	}
+}
