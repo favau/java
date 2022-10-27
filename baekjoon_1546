@@ -1,0 +1,25 @@
+package hello;
+import java.util.Scanner;
+
+public class Variable1{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		double[] a = new double[n];
+		double max=-1;
+		double sum=0;
+		double[] b = new double[n];
+		//모든 성적 입력 및 최대값 max 구하기
+		for(int i=0;i<n;i++) {
+			a[i] = sc.nextInt();
+			if(max<a[i]) {
+				max=a[i];
+			}
+		}
+		//새로운 성적 계산 및 평균 계산
+		for(int j=0;j<n;j++) {
+			sum += a[j]/max*100;
+			}
+		System.out.println(sum/n);
+	}
+}
