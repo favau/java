@@ -1,0 +1,30 @@
+package hello;
+import java.util.Scanner;
+
+public class Variable1{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		double[] o = new double[n]; 
+		int sum=0, count=0;
+		for(int i=0;i<n;i++) {
+			sum=0; count=0;
+			int m = sc.nextInt();
+			int[] a = new int[m];
+			for(int j=0;j<m;j++) {
+				a[j] = sc.nextInt();
+				sum += a[j];
+			}
+			sum /= m;
+			for(int k=0;k<m;k++) {
+				if(a[k]>sum) {
+					count++;
+				}
+			}
+			o[i] = (double)count/(double)m*100;
+		}
+		for(int l=0;l<n;l++) {
+		System.out.println(String.format("%.3f",o[l])+"%");
+		}
+	}
+}
