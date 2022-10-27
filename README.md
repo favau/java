@@ -20,3 +20,7 @@ split
 int x = x.split(" ")[0] //" "를 기준으로 분해 [0]은 아마 배열로 저장되어서 array 순서를 말하는듯?
 
 변수명.length() //변수 내용의 길이
+
+(포맷)변수명 //해당 변수 포맷로 변환
+
+String.format(포맷, 변수명) // String.format("%.6f",a)
